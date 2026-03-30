@@ -37,7 +37,10 @@ class AccueilPage extends StatelessWidget {
                       width: 200,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        border: Border.all(color: Colors.orange.shade700, width: 4),
+                        border: Border.all(
+                          color: Colors.orange.shade700,
+                          width: 4,
+                        ),
                       ),
                       child: ClipOval(
                         child: Image.asset(
@@ -46,7 +49,11 @@ class AccueilPage extends StatelessWidget {
                           errorBuilder: (context, error, stackTrace) {
                             return Container(
                               color: Colors.orange.shade100,
-                              child: Icon(Icons.public, size: 100, color: Colors.orange.shade700),
+                              child: Icon(
+                                Icons.public,
+                                size: 100,
+                                color: Colors.orange.shade700,
+                              ),
                             );
                           },
                         ),
@@ -55,14 +62,20 @@ class AccueilPage extends StatelessWidget {
                     SizedBox(height: 20),
                     Text(
                       "Bienvenue sur Présidents d'Afrique !",
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
                       textAlign: TextAlign.center,
                     ),
                     Padding(
                       padding: EdgeInsets.all(16),
                       child: Text(
                         "Testez vos connaissances sur les chefs d'État africains",
-                        style: TextStyle(fontSize: 14, color: Colors.grey.shade700),
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.grey.shade700,
+                        ),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -70,7 +83,7 @@ class AccueilPage extends StatelessWidget {
                 ),
               ),
             ),
-            
+
             // Boutons Jouer et Apprendre
             Expanded(
               flex: 1,
@@ -93,14 +106,16 @@ class AccueilPage extends StatelessWidget {
                     () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => ApprentissagePage()),
+                        MaterialPageRoute(
+                          builder: (context) => ApprentissagePage(),
+                        ),
                       );
                     },
                   ),
                 ],
               ),
             ),
-            
+
             // Boutons À propos et Quitter
             Expanded(
               flex: 1,
@@ -132,7 +147,7 @@ class AccueilPage extends StatelessWidget {
       ),
     );
   }
-  
+
   Widget _boutonAccueil(
     BuildContext context,
     String texte,
@@ -169,7 +184,7 @@ class AccueilPage extends StatelessWidget {
       ),
     );
   }
-  
+
   void _montrerAPropos(BuildContext context) {
     showDialog(
       context: context,
@@ -178,7 +193,7 @@ class AccueilPage extends StatelessWidget {
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text("Présidents d'Afrique v1.0"),
+            Text("Présidents d'Afrique v2.0"),
             SizedBox(height: 8),
             Text("Un jeu éducatif pour découvrir les présidents africains."),
             SizedBox(height: 8),
@@ -246,9 +261,7 @@ class AccueilPage extends StatelessWidget {
         Navigator.pop(dialogContext);
         Navigator.push(
           context,
-          MaterialPageRoute(
-            builder: (context) => JeuPage(niveau: niveau),
-          ),
+          MaterialPageRoute(builder: (context) => JeuPage(niveau: niveau)),
         );
       },
       borderRadius: BorderRadius.circular(10),
@@ -281,7 +294,7 @@ class AccueilPage extends StatelessWidget {
       ),
     );
   }
-  
+
   void _montrerConfirmationQuitter(BuildContext context) {
     showDialog(
       context: context,

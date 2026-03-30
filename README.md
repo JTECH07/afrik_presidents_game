@@ -29,7 +29,7 @@ Nous avons adapté l'application au thème des présidents africains:
 
 ### 2) Modifier le fonctionnement du jeu
 
-Nous avons amélioré la logique du jeu au-delà de la version de base:
+Nous avons amélioré la logique du jeu au-delà de la version de base: 
 - score dynamique (`+10` bonne réponse, `-5` mauvaise réponse, score minimum à `0`);
 - gestion des vies et du timer par tour;
 - écran de fin de partie avec score final, nombre de bonnes réponses et précision;
